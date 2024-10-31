@@ -4,5 +4,5 @@
  * @returns {Object}
  */
 module.exports.hundredAfterOdd = function hundredAfterOdd(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.reduce((acc, cur) => acc.concat(!(Math.abs(cur) % 2) ? cur : [cur, 100]), []);
 };

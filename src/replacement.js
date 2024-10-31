@@ -8,5 +8,5 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.map(el => Math.min(`${Math.abs(el)}`.length, 4));
 };

@@ -12,5 +12,5 @@
  * @returns {Object}
  */
 module.exports.partialSum = function partialSum(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.map((el, idx) => arr.slice(0, idx + 1).reduce((accumulator, currentValue) => accumulator + currentValue));
 };

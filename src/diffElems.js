@@ -4,5 +4,5 @@
  * @returns {number}
  */
 module.exports.diffElems = function diffElems(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.reduce((accumulator, currentValue) => accumulator.concat(accumulator.includes(currentValue) ? [] : [currentValue]), []).length;
 };
