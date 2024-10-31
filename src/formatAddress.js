@@ -4,5 +4,9 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function fetFormatedAddress(objAddress) {
+    return Object.keys(objAddress)
+      .reduce((acc, key) => acc.concat([objAddress[key]]), [])
+      .join(', ');
+  };
 };

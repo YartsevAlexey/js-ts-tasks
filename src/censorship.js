@@ -14,5 +14,7 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function getCensored(str) {
+    return forbidden.sort((a, b) => b.length - a.length).reduce((acc, el) => acc.replaceAll(el, '*'.repeat(el.length)), str);
+  };
 };
