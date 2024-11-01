@@ -9,5 +9,7 @@
  * @returns {function}
  */
 module.exports.sort = function sort(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function sotring(...args) {
+    return args.sort((a, b) => TestUtils.sortComparator(a, b));
+  };
 };
