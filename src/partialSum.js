@@ -12,5 +12,5 @@
  * @returns {Object}
  */
 module.exports.partialSum = function partialSum(arr) {
-  return arr.map((el, idx) => arr.slice(0, idx + 1).reduce((accumulator, currentValue) => accumulator + currentValue));
+  return arr.reduce((acc, el, idx) => acc.concat(idx === 0 ? el : acc[idx - 1] + el), []);
 };
