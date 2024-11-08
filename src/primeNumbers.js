@@ -7,6 +7,7 @@ module.exports.primeNumbers = function primeNumbers(highestNumber) {
   return function sieveOfEratosthenes(minValue, maxValue) {
     // Eratosphen optimized
     const arrNotPrime = [];
+    // create array for bit mask like undefibed, true, true
     for (let i = 2; i <= Math.min(highestNumber, maxValue); i++) {
       if (arrNotPrime[i] !== true) {
         for (let j = i ** 2; j <= highestNumber; j += i) {
@@ -16,6 +17,7 @@ module.exports.primeNumbers = function primeNumbers(highestNumber) {
       }
     }
 
+    // check bit mask
     const arrPrime = [];
     for (let k = minValue; k <= maxValue; k++) {
       if (arrNotPrime[k] === undefined) {

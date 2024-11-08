@@ -5,8 +5,6 @@
  */
 module.exports.formatAddress = function formatAddress() {
   return function fetFormatedAddress(objAddress) {
-    return Object.keys(objAddress)
-      .reduce((acc, key) => acc.concat([objAddress[key]]), [])
-      .join(', ');
+    return `${objAddress.street}, ${objAddress.house}, ${objAddress.apartment}, ${objAddress.city}, ${objAddress.postalCode}, ${objAddress.country}`;
   };
 };

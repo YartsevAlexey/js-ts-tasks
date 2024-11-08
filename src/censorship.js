@@ -15,6 +15,11 @@
  */
 module.exports.censorship = function censorship(forbidden) {
   return function getCensored(str) {
-    return forbidden.sort((a, b) => b.length - a.length).reduce((acc, el) => acc.replaceAll(el, '*'.repeat(el.length)), str);
+    //    str = str.repeat(100000);
+    //    const time1 = new Date().getTime();
+    //    const result = forbidden.sort((a, b) => b.length - a.length).reduce((acc, el) => acc.replaceAll(el, '*'.repeat(el.length)), str);
+    //    console.log(`Time: ${new Date().getTime() - time1}`);
+    //    return result;
+    return forbidden.sort((a, b) => b.length - a.length).reduce((acc, el) => acc.split(el).join('*'.repeat(el.length)), str);
   };
 };

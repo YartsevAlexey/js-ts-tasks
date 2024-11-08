@@ -10,6 +10,7 @@
  */
 module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
   return function fetFormatedAddress(objAddress) {
+    // return order.reduce((acc, key) => acc.concat([objAddress[key]]), []).join(', '); // should be faster
     return order.reduce((acc, key) => acc.concat([objAddress[key]]), []).join(', ');
   };
 };
