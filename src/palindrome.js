@@ -15,7 +15,7 @@
 module.exports.palindrome = function palindrome(TestUtils) {
   return function isPalindromeTest(str) {
     const strLowerCase = str.toLowerCase();
-    const strClean = strLowerCase.replace(/\^|[^\p{Ll}|^\p{N}]/gu, ''); // remove Caret, leave Any lower alpha in unicode, any digits
+    const strClean = strLowerCase.replace(/[^\p{Ll}\p{N}]/gu, ''); // remove Caret, leave Any lower alpha in unicode, any digits
     return TestUtils.isPalindrome.apply({ str: strClean });
     // return TestUtils.isPalindrome.apply({ str: str.toLowerCase().replace(/[^a-z0-9]/g, '') });
   };
