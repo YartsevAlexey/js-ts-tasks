@@ -4,5 +4,25 @@
  * @returns Promise
  */
 module.exports.all = function all(promisesArray) {
-  throw new Error('Not implemented'); // remove me and write your code
+  return new Promise((resolve, reject) => {
+    const results = [];
+    let j = promisesArray.length;
+    for (let i = 0; i < promisesArray.length; i++) {
+      (promisesArray[i] instanceof Promise
+        ? promisesArray[i]
+        : new Promise(r => {
+            r(promisesArray[i]);
+          })
+      )
+        .catch(err => reject(err))
+        // eslint-disable-next-line no-loop-func
+        .then(r => {
+          results[i] = r;
+          j -= 1;
+          if (j === 0) {
+            resolve(results);
+          }
+        });
+    }
+  });
 };
