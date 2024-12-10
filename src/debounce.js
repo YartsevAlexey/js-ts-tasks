@@ -9,7 +9,7 @@ module.exports.debounce = function debounce(fn, delay) {
   let timeout;
   return (...args) => {
     if (!timeout) {
-      fn.apply(module.exports, args);
+      fn.apply(this, args); // this - module.exports environment
     }
     clearTimeout(timeout);
     timeout = setTimeout(() => {

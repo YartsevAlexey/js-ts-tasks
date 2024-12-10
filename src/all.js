@@ -4,9 +4,9 @@
  * @returns Promise
  */
 module.exports.all = function all(promisesArray) {
+  let j = promisesArray.length;
   return new Promise((resolve, reject) => {
     const results = [];
-    let j = promisesArray.length;
     for (let i = 0; i < promisesArray.length; i++) {
       (promisesArray[i] instanceof Promise
         ? promisesArray[i]
