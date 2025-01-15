@@ -129,6 +129,8 @@ customElements.define(
         height: 780px;
         border-radius: 40px;
          overflow: hidden;
+         background-color: #121212;
+
         }
     </style>
 

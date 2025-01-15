@@ -1,5 +1,153 @@
 /* your css code here  */
 
+:root {
+  --panel_width: 360px;
+}
+
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
+  color: white;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 18.04px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.flrowc {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.flcol {
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper {
+  margin: calc(var(--panel_width) / 30);
+  margin-top: 50px;
+  width: --panel_width;
+  background-color: #121212;
+}
+.top {
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.top > div > img {
+  margin: 5px 5px 0 0;
+}
+.header {
+  justify-content: space-between;
+}
+.itemvalue {
+  font-size: larger;
+}
+.itemdescription {
+  margin-top: 3px;
+  font-size: smaller;
+  font-weight: 200;
+}
+.logo {
+  margin-right: calc(var(--panel_width) / 15);;
+}
+.info {
+  width: 100%;
+  justify-content: space-around;
+}
+.names {
+  margin-top: 10px;
+  text-align: start;
+}
+.nametype {
+  font-size: small;
+  color: grey;
+}
+.nameweb {
+  font-size: smaller;
+  color: lightgrey;
+}
+
+.menu {
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.menubutton {
+  width: calc(var(--panel_width) / 3);
+  padding: calc(var(--panel_width) / 80);
+  margin: calc(var(--panel_width) / 90);
+  border: 1px solid #343434;
+  border-radius: 5px;
+  background-color: black;
+  font-size: smaller;
+}
+.buttonactive {
+  color: white;
+  background-color: #4192ef;
+}
+
+.menuother {
+  width: calc(var(--panel_width) / 15);
+}
+.highlight {
+  width: calc(var(--panel_width) / 5);
+}
+.highlighticon {
+  width: calc(var(--panel_width) / 4.5);
+  text-align: center;
+}
+.highlighttext {
+  text-align: center;
+  width: calc(var(--panel_width) / 4.5);
+  font-size: small;
+  color: #fafafa;
+  font-weight: 200;
+}
+.highlighticon > img {
+  width: 80%;
+}
+.viewtypebox {
+  justify-content: space-between;
+  border-top: 1px solid #262626;
+  padding-top: 10px;
+}
+.viewtype {
+  width: calc(var(--panel_width) / 2); 
+  text-align: center;
+}
+.viewtype > img {
+  width: calc(var(--panel_width) / 15); 
+}
+.used {
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+.gallery {
+  display: flex; 
+  flex-wrap: wrap;
+  padding-top: 5px;
+}
+.image_preview {
+  width: calc(var(--panel_width) / 3); 
+}
+.gimage {
+  border: 1px solid #121212;
+  margin: -5px 0 0 -5px;
+  width: 100%;
+}
+.bottom {
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  background-color: #121212;
+  border-end-end-radius: 35px;
+  border-end-start-radius: 35px;
+}
+.bottom > div > img {
+  width: calc(var(--panel_width) / 15);
 }
