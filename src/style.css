@@ -19,12 +19,10 @@ body {
 	flex-direction: row;
 	align-items: center;
 }
-
 .flcol {
 	display: flex;
 	flex-direction: column;
 }
-
 .wrapper {
   margin: calc(var(--panel_width) / 30);
   margin-top: 50px;
@@ -62,22 +60,21 @@ body {
 }
 .nametype {
   font-size: small;
-  color: grey;
+  color: #8E8E8E;
 }
 .nameweb {
   font-size: smaller;
-  color: lightgrey;
+  color: #D4E0ED;
 }
-
 .menu {
   justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .menubutton {
   width: calc(var(--panel_width) / 3);
   padding: calc(var(--panel_width) / 80);
-  margin: calc(var(--panel_width) / 90);
+  margin: calc(var(--panel_width) / 80);
   border: 1px solid #343434;
   border-radius: 5px;
   background-color: black;
@@ -87,26 +84,41 @@ body {
   color: white;
   background-color: #4192ef;
 }
-
 .menuother {
   width: calc(var(--panel_width) / 15);
 }
 .highlight {
-  width: calc(var(--panel_width) / 5);
+  width: calc(var(--panel_width) / 4.5);
+}
+.highlightborder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 2px;
+  border: 1px solid #505050;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
 }
 .highlighticon {
-  width: calc(var(--panel_width) / 4.5);
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: #7B6FC5;
+  border-radius: 50%;
 }
 .highlighttext {
+  margin-top: 5px;
   text-align: center;
-  width: calc(var(--panel_width) / 4.5);
+  width: 72px;
   font-size: small;
   color: #fafafa;
   font-weight: 200;
-}
-.highlighticon > img {
-  width: 80%;
 }
 .viewtypebox {
   justify-content: space-between;
