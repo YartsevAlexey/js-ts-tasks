@@ -1,107 +1,125 @@
 /* your css code here  */
-
 :root {
   --panel_width: 360px;
 }
 
 body {
-  background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
-  color: white;
   font-family: Inter, sans-serif;
   font-weight: 400;
   line-height: 18.04px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  color: white;
+  background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
 }
+
 .flrowc {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
 .flcol {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .wrapper {
+  width: --panel_width;
   margin: calc(var(--panel_width) / 30);
   margin-top: 50px;
-  width: --panel_width;
   background-color: #121212;
 }
+
 .top {
-  margin-bottom: 10px;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
-.top > div > img {
+
+.top>div>img {
   margin: 5px 5px 0 0;
 }
+
 .header {
   justify-content: space-between;
 }
+
 .itemvalue {
   font-size: larger;
 }
+
 .itemdescription {
   margin-top: 3px;
   font-size: smaller;
   font-weight: 200;
 }
+
 .logo {
-  margin-right: calc(var(--panel_width) / 15);;
+  margin-right: calc(var(--panel_width) / 15);
 }
+
 .info {
   width: 100%;
   justify-content: space-around;
 }
+
 .names {
   margin-top: 10px;
   text-align: start;
 }
+
 .nametype {
   font-size: small;
   color: #8E8E8E;
 }
+
 .nameweb {
   font-size: smaller;
   color: #D4E0ED;
 }
+
 .menu {
   justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .menubutton {
   width: calc(var(--panel_width) / 3);
   padding: calc(var(--panel_width) / 80);
   margin: calc(var(--panel_width) / 80);
   border: 1px solid #343434;
   border-radius: 5px;
-  background-color: black;
   font-size: smaller;
+  background-color: black;
 }
+
 .buttonactive {
   color: white;
   background-color: #4192ef;
 }
+
 .menuother {
   width: calc(var(--panel_width) / 15);
 }
+
 .highlight {
   width: calc(var(--panel_width) / 4.5);
 }
+
 .highlightborder {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
   padding: 2px;
-  border: 1px solid #505050;
   width: 66px;
   height: 66px;
   border-radius: 50%;
+  border: 1px solid #505050;
 }
+
 .highlighticon {
   display: flex;
   flex-direction: row;
@@ -109,57 +127,67 @@ body {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background-color: #7B6FC5;
   border-radius: 50%;
+  background-color: #7B6FC5;
 }
+
 .highlighttext {
   margin-top: 5px;
   text-align: center;
   width: 72px;
   font-size: small;
-  color: #fafafa;
   font-weight: 200;
+  color: #fafafa;
 }
+
 .viewtypebox {
   justify-content: space-between;
-  border-top: 1px solid #262626;
   padding-top: 10px;
+  border-top: 1px solid #262626;
 }
+
 .viewtype {
-  width: calc(var(--panel_width) / 2); 
+  width: calc(var(--panel_width) / 2);
   text-align: center;
 }
-.viewtype > img {
-  width: calc(var(--panel_width) / 15); 
+
+.viewtype>img {
+  width: calc(var(--panel_width) / 15);
 }
+
 .used {
-  border-bottom: 1px solid white;
   padding-bottom: 5px;
+  border-bottom: 1px solid white;
 }
+
 .gallery {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   padding-top: 5px;
 }
+
 .image_preview {
-  width: calc(var(--panel_width) / 3); 
+  width: calc(var(--panel_width) / 3);
 }
+
 .gimage {
-  border: 1px solid #121212;
-  margin: -5px 0 0 -5px;
   width: 100%;
+  margin: -5px 0 0 -5px;
+  border: 1px solid #121212;
 }
+
 .bottom {
-  justify-content: space-around;
   position: absolute;
   bottom: 0;
+  justify-content: space-around;
   width: 100%;
   padding-bottom: 30px;
   padding-top: 10px;
-  background-color: #121212;
   border-end-end-radius: 35px;
   border-end-start-radius: 35px;
+  background-color: #121212;
 }
-.bottom > div > img {
+
+.bottom>div>img {
   width: calc(var(--panel_width) / 15);
 }
