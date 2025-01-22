@@ -6,5 +6,14 @@
  * @returns {boolean}
  */
 module.exports.pangram = function (word: string | number): boolean {
-  throw new Error('Not implemented'); // delete this line and write your code
+  const ENGLISH_ALPHABET_LETTERS_COUNT = 26;
+  const DECIMAL_DIGITS_COUNT = 10;
+
+  // remove unnesessery symbols
+  const uniword = typeof word === 'string' ? word.toLowerCase().replace(/[^a-z]/g, '') : word.toString(); // working with decimal numbers only by default radix
+
+  const mapper = new Map();
+  uniword.split('').forEach(el => mapper.set(el, false));
+
+  return mapper.size === (typeof word === 'string' ? ENGLISH_ALPHABET_LETTERS_COUNT : DECIMAL_DIGITS_COUNT);
 };
